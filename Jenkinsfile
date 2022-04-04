@@ -18,9 +18,7 @@ pipeline{
                 echo "building version ${NEW_VERSION}..."
             }
         }
-    }
 
-    stages {
 
         stage("test"){
             when{
@@ -34,9 +32,8 @@ pipeline{
                 echo "deploying with ${USER_CREDENTIALS}"
             }
         }
-    }
 
-    stages {
+
 
         stage("deploy"){
 
@@ -45,5 +42,4 @@ pipeline{
                 echo "deploying the version ${params.VERSION}"
             }
         }
-    }
 }
